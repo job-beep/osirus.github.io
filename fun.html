@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="my" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAW - Move Active Way Group | Photocopy & Advertising</title>
+
+    <!-- Tailwind CSS (Framework) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Padauk for Myanmar, Montserrat/Roboto for English) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Padauk:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- **************************************************************************
+       CSS STYLES (ပုံမှန်အားဖြင့် style.css ဖိုင်အဖြစ် သီးသန့်ခွဲထုတ်နိုင်သည်)
+       ************************************************************************** -->
+    
+<script src="tun.js"></script>
+
+<link rel="stylesheet" href="gun.css" type="text/css">
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- **************************************************************************
+       HEADER & NAVIGATION
+       ************************************************************************** -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <!-- Logo Area -->
+                <div class="flex items-center cursor-pointer" onclick="navigateTo('home')">
+                    <div class="maw-logo-container">
+                        <div class="maw-text-vertical">Move Active Way<br>GROUP</div>
+                        <div class="maw-letters">
+                            <span class="letter-m">M</span>
+                            <span class="letter-a">A</span>
+                            <span class="letter-w">W</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <button onclick="navigateTo('home')" class="nav-link text-gray-700 hover:text-mawBlue font-bold transition">ပင်မစာမျက်နှာ</button>
+                    <button onclick="navigateTo('services')" class="nav-link text-gray-700 hover:text-mawBlue font-bold transition">ဝန်ဆောင်မှုများ</button>
+                    <button onclick="navigateTo('pricing')" class="nav-link text-gray-700 hover:text-mawBlue font-bold transition">ဈေးနှုန်း</button>
+                    <button onclick="navigateTo('about')" class="nav-link text-gray-700 hover:text-mawBlue font-bold transition">ဆိုင်အကြောင်း</button>
+                    <button onclick="navigateTo('contact')" class="bg-mawBlue text-white px-5 py-2.5 rounded-full hover:bg-blue-800 transition font-bold shadow-md flex items-center gap-2">
+                        <i data-lucide="phone-call" class="w-4 h-4"></i> ဆက်သွယ်ရန်
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-mawBlue focus:outline-none">
+                        <i data-lucide="menu" class="h-8 w-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 shadow-inner">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <button onclick="navigateTo('home')" class="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-mawBlue rounded-md">ပင်မစာမျက်နှာ</button>
+                <button onclick="navigateTo('services')" class="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-mawBlue rounded-md">ဝန်ဆောင်မှုများ</button>
+                <button onclick="navigateTo('pricing')" class="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-mawBlue rounded-md">ဈေးနှုန်း</button>
+                <button onclick="navigateTo('about')" class="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-mawBlue rounded-md">ဆိုင်အကြောင်း</button>
+                <button onclick="navigateTo('contact')" class="block w-full text-left px-3 py-3 text-base font-medium text-mawBlue bg-blue-50 hover:bg-blue-100 rounded-md mt-2">ဆက်သွယ်ရန်</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- **************************************************************************
+       MAIN CONTENT AREA (SPA PAGES)
+       ************************************************************************** -->
+    <main class="flex-grow">
+        
+        <!-- ==========================================
+             PAGE 1: HOME (ပင်မစာမျက်နှာ)
+             ========================================== -->
+        <div id="home-page" class="page-section active">
+            <!-- Hero Section -->
+            <section class="relative bg-mawDark text-white overflow-hidden">
+                <div class="absolute inset-0 opacity-30">
+                    <img src="https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Printing Service" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-r from-mawDark to-transparent"></div>
+                </div>
+                
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative z-10">
+                    <div class="md:w-2/3 fade-up visible">
+                        <div class="inline-block bg-mawRed text-white px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase tracking-wider">Professional Services</div>
+                        <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+                            <span class="text-mawBlue bg-white px-2">MAW</span> <br>
+                            မိတ္တူ နှင့် ကြော်ငြာလုပ်ငန်း
+                        </h1>
+                        <p class="text-xl text-gray-300 mb-8 leading-relaxed max-w-xl">
+                            Move Active Way Group မှ လူကြီးမင်းတို့၏ ရုံးလုပ်ငန်းသုံး စာရွက်စာတမ်းကိစ္စများနှင့် ကြော်ငြာဒီဇိုင်းများကို တိကျ၊ မြန်ဆန်၊ မှန်ကန်စွာ ဝန်ဆောင်မှုပေးနေပါသည်။
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button onclick="navigateTo('services')" class="bg-mawBlue hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg transform hover:-translate-y-1 flex justify-center items-center gap-2">
+                                ဝန်ဆောင်မှုများ ကြည့်ရန် <i data-lucide="arrow-right"></i>
+                            </button>
+                            <button onclick="navigateTo('contact')" class="bg-transparent border-2 border-white hover:bg-white hover:text-mawDark text-white px-8 py-4 rounded-lg font-bold text-lg transition flex justify-center items-center gap-2">
+                                ဆက်သွယ်ရန်
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Features -->
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-24 relative z-20">
+                        <!-- Feature 1 -->
+                        <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-mawBlue text-center service-card">
+                            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-mawBlue">
+                                <i data-lucide="printer" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">ကြည်လင်ပြတ်သားမှု</h3>
+                            <p class="text-gray-600">နောက်ဆုံးပေါ် စက်ကြီးများအသုံးပြုထားသဖြင့် အရည်အသွေးမြင့်မားသော မိတ္တူများကို ရရှိနိုင်ပါသည်။</p>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-mawRed text-center service-card">
+                            <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-mawRed">
+                                <i data-lucide="clock" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">မြန်ဆန်တိကျမှု</h3>
+                            <p class="text-gray-600">ကျွမ်းကျင်ဝန်ထမ်းများမှ ဆောင်ရွက်ပေးသောကြောင့် အချိန်ကုန်သက်သာပြီး တိကျမှန်ကန်မှုရှိပါသည်။</p>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-mawBlue text-center service-card">
+                            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-mawBlue">
+                                <i data-lucide="dollar-sign" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">သင့်တင့်သောဈေးနှုန်း</h3>
+                            <p class="text-gray-600">ကျောင်းသား/သူများနှင့် ရုံးလုပ်ငန်းများအတွက် အထူးဈေးနှုန်းများဖြင့် ဝန်ဆောင်မှုပေးနေပါသည်။</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==========================================
+             PAGE 2: SERVICES (ဝန်ဆောင်မှုများ)
+             ========================================= -->
+        <div id="services-page" class="page-section">
+            <section class="bg-gray-100 py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-mawDark mb-4">လုပ်ငန်းဝန်ဆောင်မှုများ</h2>
+                        <div class="w-24 h-1.5 bg-mawRed mx-auto rounded-full"></div>
+                        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">MAW Group တွင် ရရှိနိုင်သော ဝန်ဆောင်မှုအမျိုးအစားများကို အောက်ပါအတိုင်း လေ့လာနိုင်ပါသည်။ တစ်နေရာတည်းတွင် အစုံအလင်ရရှိနိုင်ပါသည်။</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        
+                        <!-- Photocopy Service -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-lg group service-card">
+                            <div class="h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1542762924-f259dc83783f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Photocopy" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-mawDark mb-2 flex items-center gap-2">
+                                    <i data-lucide="copy" class="text-mawBlue"></i> မိတ္တူကူးခြင်း
+                                </h3>
+                                <p class="text-gray-600 mb-4">A4, A3, Legal Size များကို အဖြူအမည်း၊ အရောင်စုံ (Colour Photocopy) များဖြင့် ကူးယူပေးပါသည်။</p>
+                                <ul class="text-sm text-gray-500 space-y-2 mb-4">
+                                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Double Sided Print</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> ID Card Copy Mode</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Typing Service -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-lg group service-card">
+                            <div class="h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Typing" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-mawDark mb-2 flex items-center gap-2">
+                                    <i data-lucide="keyboard" class="text-mawBlue"></i> စာစီစာရိုက်
+                                </h3>
+                                <p class="text-gray-600 mb-4">မြန်မာ၊ အင်္ဂလိပ် စာများကို သတ်ပုံမှန်ကန်စွာ ရိုက်နှိပ်ပေးခြင်း။ ဇယားများ၊ ဖော်မြူလာများ ထည့်သွင်းပေးခြင်း။</p>
+                                <ul class="text-sm text-gray-500 space-y-2 mb-4">
+                                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Unicode/Zawgyi Support</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Excel Data Entry</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Binding Service -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-lg group service-card">
+                            <div class="h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Binding" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-mawDark mb-2 flex items-center gap-2">
+                                    <i data-lucide="book-open" class="text-mawBlue"></i> စာအုပ်ချုပ်လုပ်ငန်း
+                                </h3>
+                                <p class="text-gray-600 mb-4">Thesis စာအုပ်များ၊ မှတ်တမ်းစာအုပ်များကို ခိုင်ခန့်သပ်ရပ်စွာ ချုပ်လုပ်ပေးပါသည်။</p>
+                                <ul class="text-sm text-gray-500 space-y-2 mb-4">
+                                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Spiral Binding</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Hard Cover (အဖုံးမာ)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Vinyl & Design -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-lg group service-card">
+                            <div class="h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1626785774573-4b799312c95d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Design" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-mawDark mb-2 flex items-center gap-2">
+                                    <i data-lucide="palette" class="text-mawBlue"></i> ဒီဇိုင်း
+                                </h3>
+                                <p class="text-gray-600 mb-4">ဆိုင်ဆိုင်းဘုတ်၊ ကြော်ငြာပိုစတာ (Vinyl)၊ လိပ်စာကတ် (Name Card) များကို စိတ်တိုင်းကျ ဒီဇိုင်းဆွဲပေးသည်။</p>
+                            </div>
+                        </div>
+
+                        <!-- Lamination -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-lg group service-card">
+                            <div class="h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Lamination" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-mawDark mb-2 flex items-center gap-2">
+                                    <i data-lucide="layers" class="text-mawBlue"></i> ပလပ်စတစ်လောင်းခြင်း
+                                </h3>
+                                <p class="text-gray-600 mb-4">မှတ်ပုံတင်၊ ယာဉ်မောင်းလိုင်စင် နှင့် အရေးကြီးစာရွက်စာတမ်းများကို ရေရှည်ခံအောင် ပလပ်စတစ်လောင်းပေးသည်။</p>
+                            </div>
+                        </div>
+
+                        <!-- Online Services -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-lg group service-card">
+                            <div class="h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Online" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-mawDark mb-2 flex items-center gap-2">
+                                    <i data-lucide="globe" class="text-mawBlue"></i> Online ဝန်ဆောင်မှု
+                                </h3>
+                                <p class="text-gray-600 mb-4">Email ပေးပို့ခြင်း၊ Application Form တင်ပေးခြင်း၊ Viber မှ Print ထုတ်ပေးခြင်းများ ဆောင်ရွက်ပေးသည်။</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- Call to Action -->
+                    <div class="mt-16 text-center">
+                        <p class="text-xl mb-6">လူကြီးမင်းတို့၏ လုပ်ငန်းလိုအပ်ချက်များအတွက် ယခုပဲ ဆက်သွယ်လိုက်ပါ။</p>
+                        <button onclick="navigateTo('contact')" class="bg-mawRed text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition shadow-lg">
+                            ဆက်သွယ်ရန် နှိပ်ပါ
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==========================================
+             PAGE 3: PRICING (ဈေးနှုန်းများ)
+             ========================================== -->
+        <div id="pricing-page" class="page-section">
+            <section class="py-16 bg-white">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <span class="text-mawBlue font-bold tracking-wider uppercase">Transparent Pricing</span>
+                        <h2 class="text-4xl font-bold text-mawDark mt-2">ဝန်ဆောင်မှု ဈေးနှုန်းများ</h2>
+                        <p class="text-gray-500 mt-4">ဈေးနှုန်းများမှာ စက္ကူဈေးကွက်ပေါက်ဈေးအပေါ်မူတည်၍ အနည်းငယ်ပြောင်းလဲမှုရှိနိုင်ပါသည်။</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+                        <div class="bg-mawDark text-white p-4 text-center">
+                            <h3 class="font-bold text-xl">မိတ္တူ နှင့် စာစီစာရိုက် နှုန်းထားများ</h3>
+                        </div>
+                        <div class="p-6">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="border-b-2 border-gray-200">
+                                        <th class="py-4 px-4 text-gray-700 font-bold w-2/3">အမျိုးအစား</th>
+                                        <th class="py-4 px-4 text-mawBlue font-bold w-1/3 text-right">နှုန်းထား (ကျပ်)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="pricing-row border-b border-gray-100">
+                                        <td class="py-4 px-4">A4 မိတ္တူ (တစ်မျက်နှာ) - ၃၀၀ ကျပ်</td>
+                                        <td class="py-4 px-4 text-right font-bold">၃၅၀ ကျပ်</td>
+                                    </tr>
+                                    <tr class="pricing-row border-b border-gray-100">
+                                        <td class="py-4 px-4">A4 မိတ္တူ (ရှေ့နောက်) - ၃၅၀ ကျပ်</td>
+                                        <td class="py-4 px-4 text-right font-bold">၃၅၀ ကျပ်</td>
+                                    </tr>
+                                    <tr class="pricing-row border-b border-gray-100">
+                                        <td class="py-4 px-4">A4 မိတ္တူ (တစ်မျက်နှာ) - ၄၀၀ ဂရမ် (Double A)</td>
+                                        <td class="py-4 px-4 text-right font-bold">၄၀၀ ကျပ်</td>
+                                    </tr>
+                                    <tr class="pricing-row border-b border-gray-100">
+                                        <td class="py-4 px-4">Computer စာစီ (မြန်မာ/အင်္ဂလိပ်) - ၁ မျက်နှာ</td>
+                                        <td class="py-4 px-4 text-right font-bold">၁,၀၀၀ ကျပ်</td>
+                                    </tr>
+                                    <tr class="pricing-row border-b border-gray-100">
+                                        <td class="py-4 px-4">ဘွဲ့စာတမ်း စာအုပ်ချုပ် (Tape Binding)</td>
+                                        <td class="py-4 px-4 text-right font-bold">၁,၅၀၀ ကျပ်</td>
+                                    </tr>
+                                    <tr class="pricing-row border-b border-gray-100">
+                                        <td class="py-4 px-4">Spiral Binding (ကွင်းထိုး)</td>
+                                        <td class="py-4 px-4 text-right font-bold">၂,၀၀၀ ကျပ် မှစ၍</td>
+                                    </tr>
+                                    <tr class="pricing-row border-b border-gray-100">
+                                        <td class="py-4 px-4">A4 ပလပ်စတစ်လောင်း</td>
+                                        <td class="py-4 px-4 text-right font-bold">၃၅၀၀ ကျပ်</td>
+                                    </tr>
+                                    <tr class="pricing-row">
+                                        <td class="py-4 px-4">မှတ်ပုံတင် ပလပ်စတစ်လောင်း</td>
+                                        <td class="py-4 px-4 text-right font-bold">၅၀၀ ကျပ်</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-blue-50 border-l-4 border-mawBlue p-4 rounded text-sm text-blue-800 flex items-start gap-3">
+                        <i data-lucide="info" class="flex-shrink-0 mt-0.5"></i>
+                        <div>
+                            <p class="font-bold">အထူးမှတ်ချက်</p>
+                            <p>အရေအတွက် များပြားသော (Volume Print) လုပ်ငန်းများအတွက် အထူးဈေးနှုန်း သီးသန့်ရှိပါသည်။ ကျောင်းသား/ကျောင်းသူများအတွက် ကျောင်းကတ်ပြ၍ လျှော့ဈေးရယူနိုင်ပါသည်။</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==========================================
+             PAGE 4: ABOUT US (ဆိုင်အကြောင်း)
+             ========================================== -->
+        <div id="about-page" class="page-section">
+            <div class="bg-mawDark text-white py-16">
+                <div class="max-w-7xl mx-auto px-4 text-center">
+                    <h1 class="text-4xl font-bold mb-4">Move Active Way GROUP အကြောင်း</h1>
+                    <p class="text-gray-300">အရည်အသွေး၊ စေတနာ၊ ဝန်ဆောင်မှု</p>
+                </div>
+            </div>
+
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row items-center gap-12">
+                        <div class="md:w-1/2">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Office" class="rounded-lg shadow-2xl">
+                                <div class="absolute -bottom-6 -right-6 bg-mawBlue text-white p-6 rounded-lg hidden md:block">
+                                    <p class="text-4xl font-bold">10+</p>
+                                    <p class="text-sm">နှစ်ပေါင်းများစွာ<br>အတွေ့အကြုံ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2">
+                            <h2 class="text-3xl font-bold text-mawDark mb-6">ကျွန်ုပ်တို့၏ ရည်မှန်းချက်</h2>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                MAW (Move Active Way Group) သည် ပဆေးလာကုန်ဈေးတန်းတွင် စတင်တည်ထောင်ခဲ့ပြီး၊ သုံးစွဲသူမိဘပြည်သူများ၏ စာရွက်စာတမ်းဆိုင်ရာ လိုအပ်ချက်များကို တစ်နေရာတည်းတွင် ပြီးပြည့်စုံစွာ ဝန်ဆောင်မှုပေးရန် ရည်ရွယ်ပါသည်။
+                            </p>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                ခေတ်မီစက်ကိရိယာများ၊ ကျွမ်းကျင်သော ဝန်ထမ်းများနှင့်အတူ လူကြီးမင်းတို့၏ အလုပ်များကို တိကျမှန်ကန်စွာ ဆောင်ရွက်ပေးခြင်းသည် ကျွန်ုပ်တို့၏ အဓိက တာဝန်ဖြစ်သည်။
+                            </p>
+                            
+                            <div class="grid grid-cols-2 gap-4 mt-8">
+                                <div class="p-4 bg-gray-50 rounded-lg border border-gray-100">
+                                    <h4 class="font-bold text-mawBlue mb-2">Vision</h4>
+                                    <p class="text-sm text-gray-500">ထိပ်တန်း ဝန်ဆောင်မှုလုပ်ငန်းဖြစ်လာရန်</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg border border-gray-100">
+                                    <h4 class="font-bold text-mawRed mb-2">Mission</h4>
+                                    <p class="text-sm text-gray-500">Customer တိုင်း စိတ်ကျေနပ်မှုရရှိစေရန်</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==========================================
+             PAGE 5: CONTACT (ဆက်သွယ်ရန်)
+             ========================================== -->
+        <div id="contact-page" class="page-section">
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-mawDark">ဆက်သွယ်ရန်</h2>
+                        <p class="text-gray-600 mt-4">မေးမြန်းလိုသည်များရှိပါက အချိန်မရွေး ဆက်သွယ်နိုင်ပါသည်။</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Contact Info Card -->
+                        <div class="bg-white rounded-xl shadow-lg p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-mawDark">ဆိုင်လိပ်စာ</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-blue-100 p-3 rounded-full text-mawBlue">
+                                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">တည်နေရာ</h4>
+                                        <p class="text-gray-600">တောင်ငူ ဒီမော့ဆိုလမ်း၊ ပဆေးလာကုန်ဈေးတန်း၊ ဒီးမော့ဆိုအနောက်ဖက်ခြမ်း။</p>
+                            
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-red-100 p-3 rounded-full text-mawRed">
+                                        <i data-lucide="phone" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">ဖုန်းနံပါတ်များ</h4>
+                                        <p class="text-gray-600 font-mono text-lg">09-123 456 789</p>
+                                        <p class="text-gray-600 font-mono text-lg">09-987 654 321</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-green-100 p-3 rounded-full text-green-600">
+                                        <i data-lucide="clock" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">ဆိုင်ဖွင့်ချိန်</h4>
+                                        <div class="flex justify-between w-48 text-gray-600">
+                                            <span>Mon - Sat:</span>
+                                            <span>9:00 AM - 5:00 PM</span>
+                                        </div>
+                                        <div class="flex justify-between w-48 text-red-500">
+                                            <span>Sunday:</span>
+                                            <span>Closed</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-purple-100 p-3 rounded-full text-purple-600">
+                                        <i data-lucide="mail" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">Email</h4>
+                                        <p class="text-gray-600">maw.photocopy@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Message Form -->
+                        <div class="bg-white rounded-xl shadow-lg p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-mawDark">စာပို့ရန်</h3>
+                            <form id="contactForm" onsubmit="submitForm(event)">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                    <div>
+                                        <label class="block text-gray-700 font-medium mb-2">အမည်</label>
+                                        <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-mawBlue bg-gray-50" placeholder="မောင်မောင်">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-medium mb-2">ဖုန်းနံပါတ်</label>
+                                        <input type="tel" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-mawBlue bg-gray-50" placeholder="09xxxxxxxxx">
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 font-medium mb-2">ဝန်ဆောင်မှု အမျိုးအစား</label>
+                                    <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-mawBlue bg-gray-50">
+                                        <option>မိတ္တူကူးရန်</option>
+                                        <option>စာစီစာရိုက်</option>
+                                        <option>Vinyl ဒီဇိုင်း</option>
+                                        <option>အခြား</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-6">
+                                    <label class="block text-gray-700 font-medium mb-2">အကြောင်းအရာ</label>
+                                    <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-mawBlue bg-gray-50" placeholder="အသေးစိတ် ရေးသားရန်..."></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full bg-mawDark hover:bg-gray-800 text-white font-bold py-3 rounded-lg transition duration-300 flex justify-center items-center gap-2">
+                                    <i data-lucide="send" class="w-4 h-4"></i> ပေးပို့မည်
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- **************************************************************************
+       FOOTER
+       ************************************************************************** -->
+    <footer class="bg-mawDark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                         <div class="bg-white p-1 rounded-sm">
+                             <div class="maw-letters" style="font-size: 24px;">
+                                <span class="letter-m">M</span>
+                                <span class="letter-a">A</span>
+                                <span class="letter-w">W</span>
+                             </div>
+                         </div>
+                        <span class="font-bold text-2xl">Move Active Way</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-sm">
+                        လူကြီးမင်းတို့၏ လုပ်ငန်းအောင်မြင်မှုအတွက် အကောင်းဆုံးသော မိတ်ဖက်အဖြစ် ရပ်တည်လျက်ရှိပါသည်။
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-700 hover:bg-blue-600 p-2 rounded-full transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="bg-gray-700 hover:bg-sky-500 p-2 rounded-full transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-gray-200">အမြန်ကြည့်ရန်</h4>
+                    <ul class="space-y-2">
+                        <li><button onclick="navigateTo('home')" class="text-gray-400 hover:text-white transition">ပင်မစာမျက်နှာ</button></li>
+                        <li><button onclick="navigateTo('services')" class="text-gray-400 hover:text-white transition">ဝန်ဆောင်မှုများ</button></li>
+                        <li><button onclick="navigateTo('pricing')" class="text-gray-400 hover:text-white transition">ဈေးနှုန်းများ</button></li>
+                        <li><button onclick="navigateTo('contact')" class="text-gray-400 hover:text-white transition">ဆက်သွယ်ရန်</button></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Short -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-gray-200">ဆက်သွယ်ရန်</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> 09-123456789</li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> info@mawgroup.com</li>
+                        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Yangon, Myanmar</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2024 Move Active Way Group. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- **************************************************************************
+       JAVASCRIPT (script.js အဖြစ် သီးသန့်ခွဲထုတ်နိုင်သည်)
+       ************************************************************************** -->
+   
+</body>
+</html>
